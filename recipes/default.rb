@@ -42,6 +42,9 @@ when "linux"
       %w{build-essential binutils-doc}
     when "rhel", "fedora"
       %w{gcc gcc-c++ kernel-devel make}
+    # hack: i suspect someting is broke in littlechef
+    else
+      %w{gcc gcc-c++ kernel-devel make}
     end
 
   packages.each do |pkg|
